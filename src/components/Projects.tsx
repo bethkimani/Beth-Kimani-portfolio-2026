@@ -31,13 +31,12 @@ const projects = [
   featured: false
 },
 {
-  title: 'Hogwild Project',
-  description:
-  'A demonstration of advanced React Hooks implementation, showcasing state management and side effect handling patterns.',
-  tech: ['React Hooks', 'Frontend Logic'],
-  live: 'https://react-hooks-hogwild-blush.vercel.app/',
-  github: 'https://github.com/bethkimani/react-hooks-hogwild',
-  featured: false
+  title: 'TalantaMatch',
+  description: 'A full-stack AI-powered website builder that lets users create stunning websites in minutes or hire expert developers. Built with React for frontend, Django for backend, and MySQL for data management, demonstrating fast deployment and modern web development practices.',
+  tech: ['React', 'Django', 'MySQL', 'Frontend Development', 'AI Integration'],
+  live: 'https://talantamatch.com/',
+  github: 'https://github.com/bethkimani/talantamatch',
+  featured: true
 }];
 
 export function Projects() {
