@@ -41,12 +41,12 @@ export function Contact() {
             <h3 className="text-2xl font-bold text-white mb-6">Find me on</h3>
             <div className="flex justify-center gap-6">
               <SocialButton
-                href="https://github.com/bethkiman"
+                href="https://github.com/bethkimani"
                 icon={<Github className="w-6 h-6" />}
                 label="GitHub" />
 
               <SocialButton
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/beth-kimani/"
                 icon={<Linkedin className="w-6 h-6" />}
                 label="LinkedIn" />
 
