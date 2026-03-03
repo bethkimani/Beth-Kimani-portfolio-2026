@@ -2,42 +2,45 @@ import React from 'react';
 import { SectionWrapper } from './SectionWrapper';
 import { Github, ExternalLink, Folder } from 'lucide-react';
 import { motion } from 'framer-motion';
+
 const projects = [
-{
-  title: 'Pet Adoption Platform',
-  description:
-  'A comprehensive platform connecting pets with potential owners. Features secure backend authentication and intuitive client dashboards.',
-  tech: ['React', 'REST APIs', 'CSS'],
-  live: 'https://react-pets-adoption.vercel.app/',
-  github: 'https://github.com/bethkimani/react-pets-adoption',
-  featured: true
-},
-{
-  title: 'Smart Waste Management',
-  description:
-  'An innovative system for tracking waste collection. Includes dashboards, reporting tools, and workflow automation for efficient management.',
-  tech: ['React', 'Node.js', 'PostgreSQL'],
-  live: null,
-  github: null,
-  featured: true
-},
-{
-  title: 'Moringa Inventory System',
-  description:
-  'Asset tracking system built with a team. Features user authentication, asset management, and detailed reporting capabilities.',
-  tech: ['React', 'Authentication', 'Team Project'],
-  live: 'https://moringa-ims.netlify.app/',
-  github: 'https://github.com/awangui/moringa-ims-frontend',
-  featured: false
-},
-{
-  title: 'TalantaMatch',
-  description: 'A full-stack AI-powered website builder that lets users create stunning websites in minutes or hire expert developers. Built with React for frontend, Django for backend, and MySQL for data management, demonstrating fast deployment and modern web development practices.',
-  tech: ['React', 'Django', 'MySQL', 'Frontend Development', 'AI Integration'],
-  live: 'https://talantamatch.com/',
-  github: 'https://github.com/bethkimani/talantamatch',
-  featured: true
-}];
+  {
+    title: 'Pet Adoption Platform',
+    description:
+      'A comprehensive platform connecting pets with potential owners. Features secure backend authentication and intuitive client dashboards.',
+    tech: ['React', 'REST APIs', 'CSS'],
+    live: 'https://react-pets-adoption.vercel.app/',
+    github: 'https://github.com/bethkimani/react-pets-adoption',
+    featured: true
+  },
+  {
+    title: 'Gralex Farm Fresh Website',
+    description:
+      'Developed and maintained the official website for Gralex Farm Fresh Ltd. Provided technical support, implemented cybersecurity best practices, and improved internal digital systems. Managed WordPress updates, performance optimization, and content management.',
+    tech: ['WordPress', 'Cybersecurity', 'Technical Support', 'Website Maintenance'],
+    live: 'https://www.gralexfresh.com/',
+    github: null,
+    featured: true
+  },
+  {
+    title: 'Moringa Inventory System',
+    description:
+      'Asset tracking system built with a team. Features user authentication, asset management, and detailed reporting capabilities.',
+    tech: ['React', 'Authentication', 'Team Project'],
+    live: 'https://moringa-ims.netlify.app/',
+    github: 'https://github.com/awangui/moringa-ims-frontend',
+    featured: false
+  },
+  {
+    title: 'TalantaMatch',
+    description:
+      'A full-stack AI-powered website builder that lets users create stunning websites in minutes or hire expert developers. Built with React for frontend, Django for backend, and MySQL for data management, demonstrating fast deployment and modern web development practices.',
+    tech: ['React', 'Django', 'MySQL', 'Frontend Development', 'AI Integration'],
+    live: 'https://talantamatch.com/',
+    github: 'https://github.com/bethkimani/talantamatch',
+    featured: true
+  }
+];
 
 export function Projects() {
   return (
@@ -53,14 +56,12 @@ export function Projects() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map((project, idx) =>
-        <motion.div
-          key={idx}
-          whileHover={{
-            y: -10
-          }}
-          className="group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-primary/50 transition-all duration-300 flex flex-col">
-
+        {projects.map((project, idx) => (
+          <motion.div
+            key={idx}
+            whileHover={{ y: -10 }}
+            className="group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-primary/50 transition-all duration-300 flex flex-col"
+          >
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
 
             <div className="p-8 flex-1 flex flex-col">
@@ -68,29 +69,31 @@ export function Projects() {
                 <div className="p-3 bg-slate-800 rounded-lg text-primary group-hover:text-white group-hover:bg-primary transition-colors">
                   <Folder className="w-6 h-6" />
                 </div>
-                <div className="flex gap-4">
-                  {project.github &&
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-white transition-colors"
-                  aria-label="View Source Code">
 
+                <div className="flex gap-4">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-400 hover:text-white transition-colors"
+                      aria-label="View Source Code"
+                    >
                       <Github className="w-5 h-5" />
                     </a>
-                }
-                  {project.live &&
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-white transition-colors"
-                  aria-label="View Live Demo">
+                  )}
 
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-400 hover:text-white transition-colors"
+                      aria-label="View Live Demo"
+                    >
                       <ExternalLink className="w-5 h-5" />
                     </a>
-                }
+                  )}
                 </div>
               </div>
 
@@ -103,19 +106,19 @@ export function Projects() {
               </p>
 
               <div className="flex flex-wrap gap-2 mt-auto">
-                {project.tech.map((t, i) =>
-              <span
-                key={i}
-                className="text-xs font-medium px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
-
+                {project.tech.map((t, i) => (
+                  <span
+                    key={i}
+                    className="text-xs font-medium px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700"
+                  >
                     {t}
                   </span>
-              )}
+                ))}
               </div>
             </div>
           </motion.div>
-        )}
+        ))}
       </div>
-    </SectionWrapper>);
-
+    </SectionWrapper>
+  );
 }
