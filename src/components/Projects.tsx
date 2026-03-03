@@ -26,7 +26,7 @@ const projects = [
   description:
   'Asset tracking system built with a team. Features user authentication, asset management, and detailed reporting capabilities.',
   tech: ['React', 'Authentication', 'Team Project'],
-  live: 'https://moringa-ims.netlify.app/login',
+  live: 'https://moringa-ims.netlify.app/',
   github: 'https://github.com/awangui/moringa-ims-frontend',
   featured: false
 },
