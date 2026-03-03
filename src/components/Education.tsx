@@ -13,7 +13,7 @@ const education = [
   period: 'Jan 2025 – Apr 2025'
 },
 {
-  school: 'Kiriri Women’s University',
+  school: 'Kiriri Women’s University of Science and Technology',
   degree: 'BSc in Computer Science',
   period: 'Aug 2021 – Oct 2024'
 }];
