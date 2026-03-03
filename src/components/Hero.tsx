@@ -28,7 +28,7 @@ export function Hero() {
 
           <div className="p-1 rounded-full bg-gradient-to-r from-primary to-accent">
             <div className="bg-slate-900 rounded-full p-4">
-              <span className="text-4xl sm:text-5xl">👩‍💻</span>
+              <span className="text-4xl sm:text-5xl"></span>
             </div>
           </div>
         </motion.div>
