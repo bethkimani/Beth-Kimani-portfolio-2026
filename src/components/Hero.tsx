@@ -133,12 +133,12 @@ export function Hero() {
           className="mt-12 flex justify-center gap-6">
 
           <SocialLink
-            href="https://github.com/bethkiman"
+            href="https://github.com/bethkimani"
             icon={<Github />}
             label="GitHub" />
 
           <SocialLink
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/beth-kimani/"
             icon={<Linkedin />}
             label="LinkedIn" />
 
