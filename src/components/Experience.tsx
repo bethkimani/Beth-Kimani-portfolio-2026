@@ -1,49 +1,53 @@
 import React from 'react';
 import { SectionWrapper } from './SectionWrapper';
-import { Briefcase, Calendar, MapPin } from 'lucide-react';
+import { Briefcase, Calendar } from 'lucide-react';
+
 const experiences = [
-{
-  title: 'Freelance Tutor & Web Developer',
-  company: 'Remote',
-  period: 'Mar 2025 – Present',
-  description: [
-  'Teach coding concepts to beginners and young learners.',
-  'Tutor in HTML, CSS, JavaScript, and basic programming logic.',
-  'Build websites and dashboards for clients.',
-  'Support learners with practical, project-based lessons.']
-
-},
-{
-  title: 'Backend Software Engineer (Apprenticeship)',
-  company: 'AWS User Group Kenya',
-  period: 'Apr 2025 – Oct 2025',
-  description: [
-  'Developed backend systems using Node.js and Express.',
-  'Designed PostgreSQL databases for performance and accuracy.',
-  'Worked in Agile teams and remote environments.']
-
-},
-{
-  title: 'ICT Support Intern',
-  company: 'ICS Technical College',
-  period: 'May 2024 – Jul 2024',
-  description: [
-  'Built online timetable and evaluation systems using HTML, CSS, PHP, SQL.',
-  'Provided hardware, software, and network support.',
-  'Assisted staff and students with ICT issues.',
-  'Participated in team project for college mobile app.']
-
-},
-{
-  title: 'IT Expert (Part-Time)',
-  company: 'Gralex Farm Fresh Ltd',
-  period: 'Oct 2023 – Sep 2025',
-  description: [
-  'Provided technical support and cybersecurity training.',
-  'Maintained WordPress websites.',
-  'Improved internal digital systems.']
-
-}];
+  {
+    title: 'Freelance Tutor & Web Developer',
+    company: 'Remote',
+    period: 'Mar 2025 – Present',
+    description: [
+      'Providing tutoring in coding concepts and programming languages, including HTML, CSS, JavaScript, and React.',
+      'Developing responsive websites and web applications for clients.',
+      'Supporting clients in tender documentation, proposal preparation, and business submissions, ensuring accuracy, compliance, and timely delivery.',
+      'Preparing company profiles, schedules of rates, and supporting documents for tender applications.',
+      'Utilizing HTML, CSS, JavaScript, and React to build customized web solutions.',
+      'Collaborating with clients to deliver both technical web solutions and administrative/business support services tailored to their needs.'
+    ]
+  },
+  {
+    title: 'Backend Software Engineer (Apprenticeship)',
+    company: 'AWS User Group Kenya',
+    period: 'Apr 2025 – Oct 2025',
+    description: [
+      'Developed backend systems using Node.js and Express.',
+      'Designed PostgreSQL databases for performance and accuracy.',
+      'Worked in Agile teams and remote environments.'
+    ]
+  },
+  {
+    title: 'ICT Support Intern',
+    company: 'ICS Technical College',
+    period: 'May 2024 – Jul 2024',
+    description: [
+      'Built online timetable and evaluation systems using HTML, CSS, PHP, SQL.',
+      'Provided hardware, software, and network support.',
+      'Assisted staff and students with ICT issues.',
+      'Participated in team project for college mobile app.'
+    ]
+  },
+  {
+    title: 'IT Expert (Part-Time)',
+    company: 'Gralex Farm Fresh Ltd',
+    period: 'Oct 2023 – Sep 2025',
+    description: [
+      'Provided technical support and cybersecurity training.',
+      'Maintained and updated WordPress websites.',
+      'Improved internal digital systems and workflows.'
+    ]
+  }
+];
 
 export function Experience() {
   return (
@@ -53,7 +57,7 @@ export function Experience() {
           Professional <span className="text-primary">Experience</span>
         </h2>
         <p className="text-slate-400">
-          My professional journey in tech and education.
+          My professional journey in tech, development, and business support.
         </p>
       </div>
 
@@ -63,9 +67,10 @@ export function Experience() {
 
         <div className="space-y-12">
           {experiences.map((exp, idx) =>
-          <div
-            key={idx}
-            className={`relative flex flex-col md:flex-row gap-8 ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+            <div
+              key={idx}
+              className={`relative flex flex-col md:flex-row gap-8 ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+            >
 
               {/* Timeline Dot */}
               <div className="absolute left-[-5px] md:left-1/2 transform md:-translate-x-1/2 top-0 w-3 h-3 bg-primary rounded-full ring-4 ring-slate-900 z-10" />
@@ -73,14 +78,20 @@ export function Experience() {
               {/* Content */}
               <div className="flex-1 ml-6 md:ml-0">
                 <div
-                className={`bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-slate-600 transition-colors ${idx % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                  className={`bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-slate-600 transition-colors ${
+                    idx % 2 === 0 ? 'md:text-left' : 'md:text-right'
+                  }`}
+                >
 
                   <h3 className="text-xl font-bold text-white mb-1">
                     {exp.title}
                   </h3>
-                  <div
-                  className={`flex flex-wrap gap-4 text-sm text-primary mb-4 ${idx % 2 === 0 ? 'md:justify-start' : 'md:justify-end'}`}>
 
+                  <div
+                    className={`flex flex-wrap gap-4 text-sm text-primary mb-4 ${
+                      idx % 2 === 0 ? 'md:justify-start' : 'md:justify-end'
+                    }`}
+                  >
                     <span className="flex items-center gap-1">
                       <Briefcase className="w-4 h-4" /> {exp.company}
                     </span>
@@ -88,25 +99,25 @@ export function Experience() {
                       <Calendar className="w-4 h-4" /> {exp.period}
                     </span>
                   </div>
-                  <ul
-                  className={`space-y-2 text-slate-400 text-sm ${idx % 2 === 0 ? 'md:items-start' : 'md:items-end'} flex flex-col`}>
 
+                  <ul className="space-y-2 text-slate-400 text-sm flex flex-col">
                     {exp.description.map((item, i) =>
-                  <li key={i} className="flex gap-2">
+                      <li key={i} className="flex gap-2">
                         <span className="text-accent mt-1.5">•</span>
                         <span>{item}</span>
                       </li>
-                  )}
+                    )}
                   </ul>
+
                 </div>
               </div>
 
-              {/* Spacer for alternating layout */}
+              {/* Spacer */}
               <div className="flex-1 hidden md:block" />
             </div>
           )}
         </div>
       </div>
-    </SectionWrapper>);
-
+    </SectionWrapper>
+  );
 }
