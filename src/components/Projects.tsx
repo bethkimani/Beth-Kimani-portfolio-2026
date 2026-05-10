@@ -5,9 +5,18 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
+    title: 'UrbanMall E-Commerce Platform (In Progress)',
+    description:
+      'Designed and implemented frontend UI/UX for an e-commerce platform using React. Focused on responsive layouts, usability, and improving customer shopping experience. This is an ongoing project aimed at building a full-scale modern online marketplace.',
+    tech: ['React', 'UI/UX Design', 'Frontend Development', 'CSS'],
+    live: 'https://urbanmall.co.ke',
+    github: null,
+    featured: true
+  },
+  {
     title: 'Pet Adoption Platform',
     description:
-      'A comprehensive platform connecting pets with potential owners. Features secure backend authentication and intuitive client dashboards.',
+      'A comprehensive platform connecting pets with potential owners. Features secure backend authentication and intuitive client dashboards for seamless adoption processes.',
     tech: ['React', 'REST APIs', 'CSS'],
     live: 'https://react-pets-adoption.vercel.app/',
     github: 'https://github.com/bethkimani/react-pets-adoption',
@@ -16,7 +25,7 @@ const projects = [
   {
     title: 'Gralex Farm Fresh Website',
     description:
-      'Developed and maintained the official website for Gralex Farm Fresh Ltd. Provided technical support, implemented cybersecurity best practices, and improved internal digital systems. Managed WordPress updates, performance optimization, and content management.',
+      'Developed and maintained the official WordPress website for Gralex Farm Fresh Ltd. Improved performance, applied cybersecurity practices, and managed content updates and system improvements.',
     tech: ['WordPress', 'Cybersecurity', 'Technical Support', 'Website Maintenance'],
     live: 'https://www.gralexfresh.com/',
     github: null,
@@ -25,17 +34,17 @@ const projects = [
   {
     title: 'Moringa Inventory System',
     description:
-      'Asset tracking system built with a team. Features user authentication, asset management, and detailed reporting capabilities.',
+      'Team-based inventory tracking system featuring authentication, asset management, and reporting dashboards. Strengthened collaboration and Git workflow experience.',
     tech: ['React', 'Authentication', 'Team Project'],
     live: 'https://moringa-ims.netlify.app/',
     github: 'https://github.com/awangui/moringa-ims-frontend',
     featured: false
   },
   {
-    title: 'TalantaMatch',
+    title: 'TalantaMatch (AI Website Builder)',
     description:
-      'A full-stack AI-powered website builder that lets users create stunning websites in minutes or hire expert developers. Built with React for frontend, Django for backend, and MySQL for data management, demonstrating fast deployment and modern web development practices.',
-    tech: ['React', 'Django', 'MySQL', 'Frontend Development', 'AI Integration'],
+      'A full-stack AI-powered website builder that allows users to create websites in minutes or hire developers. Built using React (frontend), Django (backend), and MySQL database.',
+    tech: ['React', 'Django', 'MySQL', 'AI Integration', 'Full Stack'],
     live: 'https://talantamatch.com/',
     github: 'https://github.com/bethkimani/talantamatch',
     featured: true
@@ -50,8 +59,8 @@ export function Projects() {
           Featured <span className="text-primary">Projects</span>
         </h2>
         <p className="text-slate-400 max-w-2xl mx-auto">
-          A selection of projects that demonstrate my technical capabilities and
-          problem-solving skills.
+          A selection of projects that demonstrate my technical capabilities,
+          UI/UX design skills, and problem-solving abilities.
         </p>
       </div>
 
@@ -62,9 +71,12 @@ export function Projects() {
             whileHover={{ y: -10 }}
             className="group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-primary/50 transition-all duration-300 flex flex-col"
           >
+            {/* Top gradient line */}
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
 
             <div className="p-8 flex-1 flex flex-col">
+
+              {/* Icon + Links */}
               <div className="flex justify-between items-start mb-6">
                 <div className="p-3 bg-slate-800 rounded-lg text-primary group-hover:text-white group-hover:bg-primary transition-colors">
                   <Folder className="w-6 h-6" />
@@ -97,14 +109,17 @@ export function Projects() {
                 </div>
               </div>
 
+              {/* Title */}
               <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
                 {project.title}
               </h3>
 
+              {/* Description */}
               <p className="text-slate-400 mb-6 flex-1 leading-relaxed">
                 {project.description}
               </p>
 
+              {/* Tech stack */}
               <div className="flex flex-wrap gap-2 mt-auto">
                 {project.tech.map((t, i) => (
                   <span
@@ -115,6 +130,7 @@ export function Projects() {
                   </span>
                 ))}
               </div>
+
             </div>
           </motion.div>
         ))}
