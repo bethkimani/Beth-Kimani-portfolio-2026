@@ -22,15 +22,7 @@ const projects = [
     github: 'https://github.com/bethkimani/react-pets-adoption',
     featured: true
   },
-  {
-    title: 'Gralex Farm Fresh Website',
-    description:
-      'Developed and maintained the official WordPress website for Gralex Farm Fresh Ltd. Improved performance, applied cybersecurity practices, and managed content updates and system improvements.',
-    tech: ['WordPress', 'Cybersecurity', 'Technical Support', 'Website Maintenance'],
-    live: 'https://www.gralexfresh.com/',
-    github: null,
-    featured: true
-  },
+ 
   {
     title: 'Moringa Inventory System',
     description:
