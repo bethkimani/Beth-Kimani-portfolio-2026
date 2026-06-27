@@ -69,7 +69,7 @@ export function Hero() {
           }}
           className="text-xl md:text-2xl text-slate-300 mb-4 max-w-2xl mx-auto">
 
-          Software Engineer | Full-Stack Developer
+          Software Developer | Full-Stack Developer
         </motion.p>
 
         <motion.p
